@@ -19,19 +19,22 @@ public class CarTest{
   }
 
   @Test // 2 --------------------------------
+  // test car is empty
   public void testSeatsCount()
   {
     assertEquals( 0, mini.seatsCount() );
   }
 
   @Test // 3 --------------------------------
+  // test if car has driver
   public void testIfDriver()
   {
     mini.driver(passenger);
     assertEquals( 1, mini.seatsCount() );
   }
 
-  @Test // 4 --------------------------------------------
+  @Test // 4 --------------------------------
+  // test when car is full (4 seats)
   public void testCarIsFull()
   {
     for (int i = 0; i < 4; i++)
@@ -39,7 +42,8 @@ public class CarTest{
       assertEquals( true, mini.carFull() ); 
   }
   
-  @Test // 5 --------------------------------------------
+  @Test // 5 ------------------------------
+  // test cant add passenger when full
   public void testCantLoadWhenFull()
   {
     for (int i = 0; i < 10; i++ ) 
@@ -50,7 +54,8 @@ public class CarTest{
     assertEquals( 4, mini.seatsCount() ); 
   }
 
-  @Test // 6 --------------------------------------------
+  @Test // 6 ------------------------------------
+  // test when parked car is unloaded
   public void testEmptyWhenParked()
   {
     mini.load(passenger);
