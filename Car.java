@@ -45,4 +45,28 @@ public class Car{
     return seatsCount() == seats.length;
   }
 
+  public void load(Passenger passenger) 
+  {
+    if ( carFull() ) {
+        return;
+    }
+    int nextEmptyIndex = seatsCount();
+    seats[nextEmptyIndex] = passenger;
+  }
+
+  public void park()
+  {
+    for (int i = 0; i < seats.length; i++)
+    {
+      seats[i] = null;
+    }
+
+  } 
+
+
+
+
+
+
+
 }
